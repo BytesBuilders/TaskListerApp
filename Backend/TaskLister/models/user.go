@@ -28,3 +28,24 @@ func (u *User) BeforeSave(tx *gorm.DB) error {
 func MigrateUser() {
 	database.Database.AutoMigrate(&User{})
 }
+
+func NewUser(name,lastname,email,password string) *User{
+	user := &User{Name: name, Lastname: lastname, Email: email, Password: password}
+	return user
+}
+
+/*
+func (user *User) insert(){
+	sql := "INSERT users SET username=?, password=?, email=?"
+	result, _ := db.Exec(sql, user.Username, user.Password, user.Email)
+	user.Id, _ = result.LastInsertId()
+}
+
+func (user *User) Save(){
+	if user.Id == 0 {
+		user.insert()
+	}else{
+		user.update()
+	}
+}
+*/
