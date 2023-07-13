@@ -13,6 +13,7 @@ import (
 func main() {
 	fmt.Println("--Bienvenido a TaskLister--")
 	models.MigrateUser()
+	models.MigrateTask()
 
 	mux := mux.NewRouter()
 	
