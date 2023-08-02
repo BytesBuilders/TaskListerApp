@@ -1,19 +1,64 @@
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/login">Task Listener App</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-brand mb-0 h1"></span>
+  <!-- Container wrapper -->
+  <div class="container">
+    <!-- Navbar brand -->
+    <a class="navbar-brand me-2" href="/home">
+      <img
+        src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp"
+        height="16"
+        alt=""
+        loading="lazy"
+        style="margin-top: -1px"
+      />
+    </a>
+
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/home">Inicio <span class="sr-only"></span></a>
-        </li>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarButtonsExample" mdbCollapse>
+      <!-- Left links -->
+      <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/taskList">Listado de Tareas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/addTask">Agregar Tarea</a>
+          <a class="nav-link" href="#">Inicio</a>
         </li>
       </ul>
+    
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button class="nav-link">Mi Lista</button>
+        </li>
+      </ul>
+    
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button class="nav-link">Tareas por Vencer</button>
+        </li>
+      </ul>
+      <!-- Left links -->
+    
+      <div id="LoginButtom" class="d-flex align-items-center ms-auto">
+        <a class="nav-link separate-element">{{ userName }} </a>
+        <button
+          type="button"
+          class="btn btn-primary px-3 me-2"
+          (click)="loginStatus()"
+        >
+          {{ buttonText }}
+        </button>
+      </div>
     </div>
-  </nav>
+    
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

@@ -10,6 +10,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { LoginComponent } from './login/login.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { AuthModule } from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,18 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     TaskListComponent,
     LoginComponent,
     AddTaskComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    AuthModule.forRoot({
+      domain: 'dev-rfjvdykbu6jiqssy.us.auth0.com',
+      clientId: 'qbV6aUETUhLXK6cinGG6kwTVChPYNzv0',
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

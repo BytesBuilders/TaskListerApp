@@ -8,6 +8,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'login', component:LoginComponent},
   {path: 'SignUp',component: SignUpComponent},
   {path: 'home', component: HomeComponent},

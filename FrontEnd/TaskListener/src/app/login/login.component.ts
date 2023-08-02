@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService} from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-login',
@@ -6,7 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  loginAcount(){
-    console.log("Login Buttoms Work")
+
+  constructor(public auth: AuthService){
+
   }
 }
