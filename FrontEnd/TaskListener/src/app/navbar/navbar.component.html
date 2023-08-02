@@ -31,32 +31,29 @@
           <a class="nav-link" href="#">Inicio</a>
         </li>
       </ul>
-    
+
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <button class="nav-link">Mi Lista</button>
+          <button class="nav-link" *ngIf="isButtonMyListVisible">Mi Lista</button>
         </li>
       </ul>
-    
+
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <button class="nav-link">Tareas por Vencer</button>
+          <button class="nav-link" *ngIf="isButtonMyListVisible">Tareas por Vencer</button>
         </li>
       </ul>
       <!-- Left links -->
-    
+
+      <!-- navbar.component.html -->
       <div id="LoginButtom" class="d-flex align-items-center ms-auto">
-        <a class="nav-link separate-element">{{ userName }} </a>
-        <button
-          type="button"
-          class="btn btn-primary px-3 me-2"
-          (click)="loginStatus()"
-        >
+        <a class="nav-link separate-element me-2">{{ userName }}</a>
+        <button type="button" class="btn btn-primary px-3" (click)="loginStatus()">
           {{ buttonText }}
         </button>
       </div>
     </div>
-    
+
     <!-- Collapsible wrapper -->
   </div>
   <!-- Container wrapper -->

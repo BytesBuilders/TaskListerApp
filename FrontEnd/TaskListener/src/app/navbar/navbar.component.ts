@@ -1,8 +1,8 @@
-// navbar.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '@auth0/auth0-angular';
 import { LoginService } from '../services/login.service';
+import { Subscription } from 'rxjs';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-navbar',
@@ -11,25 +11,31 @@ import { LoginService } from '../services/login.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public auth: AuthService, private router: Router, private loginService: LoginService) {}
+  constructor(private auth: AuthService,private router: Router, private loginService: LoginService) {}
 
   buttonText: string = '';
   userName: string = '';
+  LoginStatusInfo:boolean = false;
+  isButtonMyListVisible: boolean = false;
+
 
   ngOnInit() {
     this.loginService.checkLogin().subscribe(isAuthenticated => {
       if (isAuthenticated) {
         // Usuario autenticado
         this.buttonText = 'Log Out';
-        this.userName = this.loginService.getName() || "Error";
-        console.log("En navbar:" + this.loginService.getName());
+        this.auth.user$.subscribe(user => {
+          this.userName = user?.name || 'NoNameAccess';
+          console.log("Nombre Usuario:", this.userName);
+        });
+        this.showButton();
       } else {
         this.buttonText = 'Login';
         this.userName = '';
-        // Usuario no autenticado
-        // Aquí colocas la lógica para el inicio de sesión
+        this.hideButton();
       }
     });
+    console.log("Status Login:", this.LoginStatusInfo)
   }
 
   loginStatus() {
@@ -40,5 +46,13 @@ export class NavbarComponent implements OnInit {
         this.loginService.login();
       }
     });
+  }
+
+  hideButton() {
+    this.isButtonMyListVisible = false;
+  }
+
+  showButton() {
+    this.isButtonMyListVisible = true;
   }
 }

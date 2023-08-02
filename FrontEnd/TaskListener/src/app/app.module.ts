@@ -10,6 +10,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthModule } from '@auth0/auth0-angular';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { AuthModule } from '@auth0/auth0-angular';
       }
     }),
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

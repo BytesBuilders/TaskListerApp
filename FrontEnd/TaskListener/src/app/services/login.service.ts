@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "@auth0/auth0-angular";
 import { map } from "rxjs/operators";
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 
 @Injectable({
@@ -11,11 +11,18 @@ import { Observable } from 'rxjs';
 
 export class LoginService{
 
-    private userName: string = '';
+  private userNameSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  userName$: Observable<string> = this.userNameSubject.asObservable();
+
+    userName: string = '';
     userToken: string = '';
     loginStatusInfo = false;
 
     constructor(public auth: AuthService, private router: Router){}
+
+    setUserName(userName: string) {
+      this.userNameSubject.next(userName);
+    }
 
     IsLogged() {
         return this.auth.isAuthenticated$.pipe(
@@ -58,6 +65,6 @@ export class LoginService{
       }
 
       getName(){
-        return this.userName;
+        return this.userNameSubject.value;
       }
 }
