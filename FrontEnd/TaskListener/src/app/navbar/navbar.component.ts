@@ -11,7 +11,7 @@ import { LoginService } from '../services/login.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public auth: AuthService, private routher: Router, private loginService: LoginService) {}
+  constructor(public auth: AuthService, private router: Router, private loginService: LoginService) {}
 
   buttonText: string = '';
   userName: string = '';

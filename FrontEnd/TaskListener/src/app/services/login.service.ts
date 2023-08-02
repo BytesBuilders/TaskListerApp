@@ -51,6 +51,7 @@ export class LoginService{
 
       logOut(){
         this.auth.logout()
+        this.router.navigate(['/SignUp']);
         this.loginStatusInfo = false;
         this.userName = '';
         this.userToken = '';
