@@ -1,0 +1,10 @@
+.card-hover-effect {
+    transition: background-color 0.3s, color 0.3s; /* Agregamos una transición suave para el efecto hover */
+  }
+  
+  .card-hover-effect:hover {
+    background-color: blue; /* Color de fondo azul claro cuando se pasa el cursor sobre la carta */
+    color: white; /* Texto en color blanco cuando se pasa el cursor sobre la carta */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre la carta */
+  }
+  
