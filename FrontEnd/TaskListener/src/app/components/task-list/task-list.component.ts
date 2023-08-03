@@ -24,7 +24,9 @@ export class TaskListComponent implements OnInit {
     { nombre: 'Tarea 2', fechaCreacion: '2023-08-03', fechaLimite: '2023-08-15', prioridad: 'Media' },
     { nombre: 'Tarea 3', fechaCreacion: '2023-08-04', fechaLimite: '2023-08-12', prioridad: 'Baja' },
     { nombre: 'Tarea 4', fechaCreacion: '2023-08-04', fechaLimite: '2023-08-12', prioridad: 'Baja' },
-    { nombre: 'Tarea 5', fechaCreacion: '2023-08-02', fechaLimite: '2023-08-10', prioridad: 'Alta' }
+    { nombre: 'Tarea 5', fechaCreacion: '2023-08-02', fechaLimite: '2023-08-10', prioridad: 'Alta' },
+    { nombre: 'Tarea 6', fechaCreacion: '2023-08-04', fechaLimite: '2023-08-12', prioridad: 'Baja' },
+    { nombre: 'Tarea 7', fechaCreacion: '2023-08-02', fechaLimite: '2023-08-10', prioridad: 'Alta' }
   ];
 
   onCartaClickeada(tarea: any) {
