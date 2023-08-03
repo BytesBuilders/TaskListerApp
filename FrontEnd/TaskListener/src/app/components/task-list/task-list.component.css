@@ -3,7 +3,7 @@
   }
   
   .card-hover-effect:hover {
-    background-color: blue; /* Color de fondo azul claro cuando se pasa el cursor sobre la carta */
+    background-color: #0b5ed7; /* Color de fondo azul claro cuando se pasa el cursor sobre la carta */
     color: white; /* Texto en color blanco cuando se pasa el cursor sobre la carta */
     cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre la carta */
   }

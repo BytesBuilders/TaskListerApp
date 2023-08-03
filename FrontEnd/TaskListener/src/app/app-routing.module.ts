@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ErrorComponent } from './error/error.component';
-import { HomeComponent } from './home/home.component';
-import { AddTaskComponent } from './add-task/add-task.component';
-import { TaskListComponent } from './task-list/task-list.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { ErrorComponent } from './components/error/error.component';
+import { HomeComponent } from './components/home/home.component';
+import { AddTaskComponent } from './components/add-task/add-task.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'addTask',component: AddTaskComponent},
   {path: 'taskList', component: TaskListComponent},
+  {path: 'userProfile', component: ProfileComponent},
   {path: '**', component: ErrorComponent}
 ];
 

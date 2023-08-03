@@ -1,0 +1,39 @@
+.separete-element{
+    margin-right: 10px;
+}
+
+/* Agrega un estilo al contenedor del botón y la imagen */
+#LoginButtom {
+    position: relative;
+  }
+  
+  /* Estilo base de la imagen de perfil */
+  #LoginButtom img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Agregamos una transición suave para el efecto */
+  }
+  
+  /* Efecto de agrandar la imagen cuando el cursor está sobre ella */
+  #LoginButtom img:hover {
+    transform: scale(1.2); /* Escalamos la imagen al 120% de su tamaño original */
+  }
+  
+  .bg-custom-blue {
+    background-color: #0b5ed7; /* Color azul claro - puedes cambiar el valor según tu preferencia */
+  }
+
+  .text-white {
+    color: white;
+  }
+  
+  .btn-custom-blue {
+    background-color: white;
+    color: blue;
+  }
+  
+  .btn-custom-blue:hover {
+    background-color: #F0F0F0; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+  }
+  
+  

@@ -1,8 +1,10 @@
 <div class="container" colo>
-    <h2>Lista de Tareas</h2>
-    <div class="d-flex justify-content-end mb-3">
-      <button type="button" class="btn btn-primary">Nueva Tarea</button>
-    </div>
+  <h1>Bienvenido de Vuelta {{username}}</h1>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Lista de Tareas</h3>
+    <button type="button" class="btn btn-primary" routerLink="/addTask">Nueva Tarea</button>
+  </div>
+  
   
     <div class="row">
       <!-- Utilizamos *ngFor para iterar sobre la lista de tareas y mostrar cada tarea como una carta -->
