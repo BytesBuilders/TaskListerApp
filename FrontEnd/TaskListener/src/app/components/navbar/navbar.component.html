@@ -18,23 +18,22 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Inicio</a>
+          <a class="nav-link" href="#">Inicio</a>
         </li>
 
         <li class="nav-item">
-          <button class="nav-link text-white" *ngIf="isButtonMyListVisible">Mi Lista</button>
+          <button class="nav-link" *ngIf="isButtonMyListVisible">Mi Lista</button>
         </li>
 
         <li class="nav-item">
-          <button class="nav-link text-white" *ngIf="isButtonMyListVisible">Tareas por Vencer</button>
+          <button class="nav-link" *ngIf="isButtonMyListVisible">Tareas por Vencer</button>
         </li>
       </ul>
 
       <!-- Right links -->
       <div id="LoginButtom" class="d-flex align-items-center">
-        <img *ngIf="userPicture" [src]="userPicture" alt="User Profile Picture" class="rounded-circle me-2"
-          style="width: 30px; height: 30px;" routerLink="/userProfile">
-        <button type="button" class="btn btn-custom-blue px-3" (click)="loginStatus()">
+        <img [src]="userPicture" alt="User Profile Picture" class="rounded-circle me-2" style="width: 30px; height: 30px;" routerLink="/userProfile">
+        <button type="button" class="btn btn-primary px-3" (click)="loginStatus()">
           {{ buttonText }}
         </button>
       </div>

@@ -20,11 +20,11 @@
   }
   
   .bg-custom-blue {
-    background-color: #0b5ed7; /* Color azul claro - puedes cambiar el valor según tu preferencia */
+    background-color: white; /* Color azul claro - puedes cambiar el valor según tu preferencia */
   }
 
   .text-white {
-    color: white;
+    color: blue;
   }
   
   .btn-custom-blue {

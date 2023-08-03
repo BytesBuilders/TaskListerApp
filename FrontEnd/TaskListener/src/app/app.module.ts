@@ -30,7 +30,7 @@ import { FinalComponent } from './components/final/final.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     AuthModule.forRoot({
       domain: 'dev-rfjvdykbu6jiqssy.us.auth0.com',
       clientId: 'qbV6aUETUhLXK6cinGG6kwTVChPYNzv0',
