@@ -3,8 +3,6 @@ import 'package:tasklister/screens/auth/signup_page.dart';
 
 import '../model/welcome_page.dart';
 
-
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
