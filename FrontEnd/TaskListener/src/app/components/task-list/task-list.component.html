@@ -15,7 +15,7 @@
   <div class="row">
     <!-- Utilizamos *ngFor para iterar sobre la lista de tareas y mostrar cada tarea como una carta -->
     <div class="col-md-4 mb-4" *ngFor="let tarea of listaTareas">
-      <div class="card card-hover-effect" (click)="onCartaClickeada(tarea)">
+      <div [ngClass]="getCardClasses(tarea)" class="card card-hover-effect" [routerLink]="['/task', tarea.id]">
         <div class="card-body">
           <h5 class="card-title">{{ tarea.nombre }}</h5>
           <div class="row">

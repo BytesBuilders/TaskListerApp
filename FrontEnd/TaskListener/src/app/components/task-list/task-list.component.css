@@ -1,10 +1,27 @@
+/* Estilos para las tarjetas sin efecto hover */
 .card-hover-effect {
-    transition: background-color 0.3s, color 0.3s; /* Agregamos una transición suave para el efecto hover */
-  }
-  
-  .card-hover-effect:hover {
-    background-color: #0b5ed7; /* Color de fondo azul claro cuando se pasa el cursor sobre la carta */
-    color: white; /* Texto en color blanco cuando se pasa el cursor sobre la carta */
-    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre la carta */
-  }
-  
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s; /* Agregamos una transición suave para el efecto hover */
+}
+
+/* Estilos para las tarjetas con prioridad Alta */
+.card-priority-high.card-hover-effect:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
+
+/* Estilos para las tarjetas con prioridad Media */
+.card-priority-medium.card-hover-effect:hover {
+  cursor: pointer;
+  background-color: #0b5ed7;
+  color: white;
+}
+
+/* Estilos para las tarjetas con prioridad Baja */
+.card-priority-low.card-hover-effect:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}

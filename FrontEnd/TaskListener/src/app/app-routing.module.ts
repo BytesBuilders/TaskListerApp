@@ -7,6 +7,8 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { OvercomeComponent } from './components/overcome/overcome.component';
+import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path: 'taskList', component: TaskListComponent},
   {path: 'user-calendar', component: CalendarComponent},
   {path: 'userProfile', component: ProfileComponent},
+  {path: 'overcome', component: OvercomeComponent},
+  { path: 'task/:id', component: TaskDetailComponent },
   {path: '**', component: ErrorComponent}
 ];
 

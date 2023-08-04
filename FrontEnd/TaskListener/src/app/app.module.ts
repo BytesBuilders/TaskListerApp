@@ -16,6 +16,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FinalComponent } from './components/final/final.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { TaskInfoComponent } from './components/task-info/task-info.component';
+import { OvercomeComponent } from './components/overcome/overcome.component';
+import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { TaskInfoComponent } from './components/task-info/task-info.component';
     FinalComponent,
     CalendarComponent,
     TaskInfoComponent,
+    OvercomeComponent,
+    TaskDetailComponent,
   ],
   imports: [
     BrowserModule,
