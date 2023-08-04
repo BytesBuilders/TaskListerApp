@@ -16,7 +16,9 @@ export class TaskDataService {
       prioridad: 'Alta',
       estado: 'pendiente',
       categorias: ['trabajo'],
-      etiquetas: ['importante', 'urgente']
+      etiquetas: ['importante', 'urgente'],
+      pomodoro: 25, // Por ejemplo, 25 minutos para la tarea
+      pomodoroTimeElapsed: 10 // Por ejemplo, 10 minutos transcurridos en el pomodoro
     };
     
     const tareaQuemada2: Task = {
@@ -27,7 +29,9 @@ export class TaskDataService {
       prioridad: 'Media',
       estado: 'en progreso',
       categorias: ['hogar', 'personal'],
-      etiquetas: ['importante']
+      etiquetas: ['importante'],
+      pomodoro: 30, // Por ejemplo, 30 minutos para la tarea
+      pomodoroTimeElapsed: 15 // Por ejemplo, 15 minutos transcurridos en el pomodoro
     };
     
     const tareaQuemada3: Task = {
@@ -38,8 +42,12 @@ export class TaskDataService {
       prioridad: 'Baja',
       estado: 'completada',
       categorias: ['estudios'],
-      etiquetas: []
+      etiquetas: [],
+      pomodoro: 20, // Por ejemplo, 20 minutos para la tarea
+      pomodoroTimeElapsed: 5 // Por ejemplo, 5 minutos transcurridos en el pomodoro
     };
+    
+    
     
 
     this.listTask.push(tareaQuemada);

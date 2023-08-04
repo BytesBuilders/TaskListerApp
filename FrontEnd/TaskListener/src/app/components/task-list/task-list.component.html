@@ -31,6 +31,14 @@
               <p><strong>Prioridad:</strong> {{ tarea.prioridad }}</p>
             </div>
           </div>
+
+          <!-- Agregamos la barra de progreso para el pomodoro -->
+          <div class="progress mt-3">
+            <div class="progress-bar" role="progressbar" [style.width]="getPomodoroProgress(tarea)" [attr.aria-valuenow]="getPomodoroProgress(tarea)" aria-valuemin="0" aria-valuemax="100">
+              <!-- Mostramos el valor de la barra de progreso -->
+              {{ getPomodoroProgress(tarea) }}
+            </div>
+          </div>
         </div>
       </div>
     </div>

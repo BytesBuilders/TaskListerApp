@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  constructor(private router: Router,private auth: AuthService, private taskDataService: TaskDataService) {}
+  constructor(private router: Router, private auth: AuthService, private taskDataService: TaskDataService) {}
 
   username: string = '';
 
@@ -45,15 +45,23 @@ export class TaskListComponent implements OnInit {
   }
 
   getCardClasses(tarea: Task) {
-    switch (tarea.prioridad) {
-      case 'Alta':
-        return 'card-priority-high';
-      case 'Media':
-        return 'card-priority-medium';
-      case 'Baja':
-        return 'card-priority-low';
-      default:
-        return '';
+    const cardClasses = {
+      'card-priority-high': tarea.prioridad === 'Alta',
+      'card-priority-medium': tarea.prioridad === 'Media',
+      'card-priority-low': tarea.prioridad === 'Baja',
+      'card-pomodoro-active': tarea.pomodoroTimeElapsed ?? 0 > 0
+    };
+
+    return cardClasses;
+  }
+
+  getPomodoroProgress(tarea: Task): string {
+    if (tarea.pomodoro && tarea.pomodoroTimeElapsed !== undefined) {
+      const progress = (tarea.pomodoroTimeElapsed / tarea.pomodoro) * 100;
+      return `${progress}%`;
+    } else {
+      return '0%';
     }
   }
+  
 }

@@ -7,4 +7,6 @@ export interface Task {
   estado: 'pendiente' | 'en progreso' | 'completada';
   categorias: string[];
   etiquetas: string[];
+  pomodoro?: number; // Duración total del pomodoro en minutos
+  pomodoroTimeElapsed?: number; // Tiempo transcurrido del pomodoro en minutos
 }
