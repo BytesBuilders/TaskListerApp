@@ -14,6 +14,8 @@ import { LoginService } from './services/login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FinalComponent } from './components/final/final.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { TaskInfoComponent } from './components/task-info/task-info.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { FinalComponent } from './components/final/final.component';
     SignUpComponent,
     ProfileComponent,
     FinalComponent,
+    CalendarComponent,
+    TaskInfoComponent,
   ],
   imports: [
     BrowserModule,

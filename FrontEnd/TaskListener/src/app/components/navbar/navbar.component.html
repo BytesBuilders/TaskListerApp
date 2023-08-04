@@ -22,17 +22,19 @@
         </li>
 
         <li class="nav-item">
-          <button class="nav-link" *ngIf="isButtonMyListVisible">Mi Lista</button>
+          <button class="nav-link" *ngIf="isButtonMyListVisible" routerLink="/taskList">Mi Lista</button>
         </li>
-
         <li class="nav-item">
-          <button class="nav-link" *ngIf="isButtonMyListVisible">Tareas por Vencer</button>
+          <button class="nav-link" *ngIf="isButtonMyListVisible" routerLink="/user-calendar">Calendario</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" *ngIf="isButtonMyListVisible">Por Vencer</button>
         </li>
       </ul>
 
       <!-- Right links -->
       <div id="LoginButtom" class="d-flex align-items-center">
-        <img [src]="userPicture" alt="User Profile Picture" class="rounded-circle me-2" style="width: 30px; height: 30px;" routerLink="/userProfile">
+        <img [src]="userPicture" *ngIf="isButtonMyListVisible" alt="User Profile Picture" class="rounded-circle me-2" style="width: 30px; height: 30px;" routerLink="/userProfile">
         <button type="button" class="btn btn-primary px-3" (click)="loginStatus()">
           {{ buttonText }}
         </button>

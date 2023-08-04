@@ -1,34 +1,38 @@
-<div class="container" colo>
+<div class="container">
   <h1>Bienvenido de Vuelta, {{username}}</h1>
   <div class="d-flex justify-content-between align-items-center mb-3">
     <h3>Lista de Tareas</h3>
-    <button type="button" class="btn btn-primary" routerLink="/addTask">Ir a Calendario</button>
     <button type="button" class="btn btn-primary" routerLink="/addTask">Nueva Tarea</button>
   </div>
-  
-  
-    <div class="row">
-      <!-- Utilizamos *ngFor para iterar sobre la lista de tareas y mostrar cada tarea como una carta -->
-      <div class="col-md-4 mb-4" *ngFor="let tarea of listaTareas">
-        <div class="card card-hover-effect" (click)="onCartaClickeada(tarea)"> <!-- Agregamos la directiva (click) -->
-          <div class="card-body">
-            <h5 class="card-title">{{ tarea.nombre }}</h5>
-            <div class="row">
-              <div class="col">
-                <p><strong>Creación:</strong> {{ tarea.fechaCreacion }}</p>
-              </div>
-              <div class="col">
-                <p><strong>Límite:</strong> {{ tarea.fechaLimite }}</p>
-              </div>
+
+  <!-- Usamos ngIf para verificar si la lista de tareas está vacía -->
+  <div *ngIf="listaTareas.length === 0" class="text-center mt-5">
+    <div class="alert alert-info" role="alert">
+      No tienes tareas, Agrega tu primera tarea
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Utilizamos *ngFor para iterar sobre la lista de tareas y mostrar cada tarea como una carta -->
+    <div class="col-md-4 mb-4" *ngFor="let tarea of listaTareas">
+      <div class="card card-hover-effect" (click)="onCartaClickeada(tarea)">
+        <div class="card-body">
+          <h5 class="card-title">{{ tarea.nombre }}</h5>
+          <div class="row">
+            <div class="col">
+              <p><strong>Creación:</strong> {{ tarea.fechaCreacion }}</p>
             </div>
-            <div class="row justify-content-center"> <!-- Creamos una fila para centrar el elemento -->
-              <div class="col">
-                <p><strong>Prioridad:</strong> {{ tarea.prioridad }}</p> <!-- La etiqueta "Prioridad" estará centrada -->
-              </div>
+            <div class="col">
+              <p><strong>Límite:</strong> {{ tarea.fechaLimite }}</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col">
+              <p><strong>Prioridad:</strong> {{ tarea.prioridad }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

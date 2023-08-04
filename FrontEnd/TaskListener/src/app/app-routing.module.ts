@@ -6,6 +6,7 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'addTask',component: AddTaskComponent},
   {path: 'taskList', component: TaskListComponent},
+  {path: 'user-calendar', component: CalendarComponent},
   {path: 'userProfile', component: ProfileComponent},
   {path: '**', component: ErrorComponent}
 ];

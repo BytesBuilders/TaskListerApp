@@ -16,6 +16,10 @@ export class AddTaskComponent {
     return `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
   }
 
+  volverAtras(){
+    
+  }
+
   agregarTarea(): void {
     // Aquí puedes implementar la lógica para agregar la tarea
     console.log('Se ha agregado una nueva tarea');

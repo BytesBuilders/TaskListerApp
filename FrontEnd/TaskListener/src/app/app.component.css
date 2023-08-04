@@ -1,0 +1,15 @@
+.router-content {
+    min-height: calc(100vh - 60px); /* Ajusta el valor según la altura del navbar si es necesario */
+    margin-bottom: 70px; /* Ajusta el valor según el tamaño del componente <app-final> */
+    padding-bottom: 20px; /* Espacio adicional para separar el componente <app-final> del contenido */
+  }
+  
+  .footer-container {
+    position: fixed;
+    bottom: -100px; /* Inicialmente oculto el componente por debajo de la pantalla */
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #f8f9fa;
+    transition: bottom 0.3s; /* Agrego una transición para que el componente se deslice hacia arriba al mostrarse */
+  }
