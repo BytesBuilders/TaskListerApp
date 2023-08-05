@@ -6,12 +6,15 @@ import (
 	"net/http"
 	"proyect_modules/handler"
 	"proyect_modules/models"
-
+	//"time"
 	"github.com/gorilla/mux"
 )
 
 func main() {
 	fmt.Println("--Bienvenido a TaskLister--")
+	
+	//time.Sleep(10 * time.Second)
+
 	models.MigrateUser()
 
 	mux := mux.NewRouter()
