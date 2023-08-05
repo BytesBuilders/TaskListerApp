@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - tasklister_default
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: takslister
+    networks:
+      - tasklister_default
+
+networks:
+  tasklister_default:
+    driver: bridge
